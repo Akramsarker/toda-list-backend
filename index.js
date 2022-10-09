@@ -1,9 +1,6 @@
 const express = require("express");
 const cors = require("cors");
 const app = express();
-const dotenv = require("dotenv");
-dotenv.config();
-
 const client = require("./connect-mongodb");
 
 app.use(cors());
@@ -87,7 +84,7 @@ app.delete("/todo/:id", async (req, res) => {
   }
 });
 
-const port = process.env.PORT || 3001;
+const port = 3001;
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
