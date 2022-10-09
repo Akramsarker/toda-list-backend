@@ -2,9 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 const dotenv = require("dotenv");
-if (process.env.NODE_ENV === "local") {
-  dotenv.config();
-}
+dotenv.config();
 
 const client = require("./connect-mongodb");
 
