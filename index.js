@@ -39,6 +39,7 @@ app.post("/todo", async (req, res) => {
     todo,
   });
 });
+
 // Update Api
 app.put("/todo/:id", async (req, res) => {
   await client.connect();
